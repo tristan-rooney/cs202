@@ -1,0 +1,333 @@
+/*Author: Tristan Rooney
+Purpose: A css file to change the look of a webpage called PLS
+Last Modified: Oct 26th @ 11:13pm
+*/
+
+/* Line under header 1*/
+section > h1{
+    border-bottom: 1px solid lightgray;
+}
+
+/* Adds pls at top*/
+header .pls::after{
+    content: "PLS";
+    color:white;
+    position:relative;
+    top:15px;
+    left:15px;
+    font-size: 200%;
+    background-color: rgb(109,78,40);
+    border-radius: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+header .pls:hover::after{
+    background-color: blue !important;
+}
+
+/*Takes away hyperlink underline for pls at top*/
+header>a[href="home.html"]{
+    text-decoration: none;
+}
+
+header>a[href="home.html"]:hover{
+ text-decoration-color: blue;
+}
+
+/*Creates orange elipse at top */
+header .pls{
+    width:100%;
+    height:70px;
+    background-color: rgb(237, 157, 77);
+    border-top-left-radius: 25pt 25pt;
+    border-top-right-radius: 25pt 25pt;
+    border-bottom-left-radius: 25pt 25pt;
+    border-bottom-right-radius: 25pt 25pt;
+}
+
+
+/*Changes size of first letters in paragraphs */
+section > p::first-letter{
+    font-weight: 700;
+    font-size: 200%;
+}
+
+/*Contact and Home links inline */
+header li{
+    display:inline;
+}
+
+/*Break between Contact and Home */
+header li:first-child::after{
+    content: " |";
+}
+
+/*Line under second header */
+section > h2{
+    border-bottom: 1px solid lightgray;
+    margin-left: 1em;
+}
+
+/*Bolds language text in paragraphs */
+.language{
+    font-weight: 700;
+}
+
+/*Changes bulletpoint font*/
+.paradigm-list{
+    font-style: italic;
+    list-style-type: circle;
+}
+
+/*Adds pls into second paragraph and bolds it */
+span.pls::after{
+    content: "PLS";
+    font-weight: 700;
+}
+
+/*Bolds text with sq class in second paragraph*/
+.sq{
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*Adds ' to best */
+.sq::before,.sq::after{
+    content: "'";
+}
+
+/*Sets tab location within container*/
+.tab-set ul{
+    list-style: none;
+    padding: 0; 
+    margin-left: 167px;
+}
+
+/*Sets Tabs to inline and gives them borders*/
+.tab-set li{
+    display: inline;
+    border: solid;
+    border-width: 1px 1px 0px 1px;
+    border-top-right-radius: 5pt 5pt;
+    border-top-left-radius: 5pt 5pt;
+}
+
+/*Pads between tabs spreakding them apart*/
+.tab-set li a{
+    padding: 0 30px;
+}
+
+section li a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 8px;
+}
+
+/*Sets background of container as well as width and border*/
+.tab{
+    background-color: rgb(243, 190, 128);
+    border: 1px solid;
+    width: 75%;
+    position: relative;
+    left: 167px;
+    margin-bottom: 50px;
+}
+
+/*Sets color of tabs*/
+.tab-label{
+    background-color: rgb(243, 190, 128);
+    padding-bottom: 16px;
+}
+
+/*Margins sides of page*/
+body{
+    margin-left: 50px;
+    margin-right:50px;
+}
+
+/*Defines action for hovering over tabs*/
+.tab-label:hover{
+    background-color: rgb(109, 78, 40);
+}
+
+/*Floats images to the right of the container*/
+img[alt="Portrait of John McCarthy"],img[alt="Portrait of John Backus"],img[alt="Image of Alain Colmerauer"]{
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+/*Changes first picture*/
+img[alt="Portrait of John McCarthy"]{
+    height:12%;
+    width:12%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+}
+
+/*Changes second picture*/
+img[alt="Portrait of John Backus"]{
+    height:12%;
+    width:12%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+}
+
+/*Changes third picture*/
+img[alt="Image of Alain Colmerauer"]{
+    height:12%;
+    width:12%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+}
+
+/*Unless clicked on, the tab does not display*/
+[class="tab"]{
+    display:none;
+}
+
+/*Defines how code should look*/
+code{
+    background-color: beige;
+    border-top-left-radius: 4pt 4pt;
+    border-top-right-radius: 4pt 4pt;
+    border-bottom-left-radius: 4pt 4pt;
+    border-bottom-right-radius: 4pt 4pt;
+    white-space: pre;
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid;
+}
+
+/*Changes first letter in container and makes it red*/
+.tab p:first-of-type::first-letter{
+    font-size: 400%;
+    color: red;
+    float:left;
+    text-shadow: 3px 3px black;
+}
+
+/*Sets footer to bottom*/
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: beige;
+    color: black;
+    margin-top: 50px;
+}
+
+section:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+/*Changes first picture*/
+img[alt="Portrait of Jasmine Shamgar"]{
+    height:15%;
+    width:15%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+    box-shadow: 5px 5px;
+}
+
+/*Changes second picture*/
+img[alt="Portrait of Hunter Phalgor III"]{
+    height:15%;
+    width:15%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+    box-shadow: 5px 5px;
+}
+
+/*Changes third picture*/
+img[alt="Portrait of Davidson Selvator"]{
+    height:15%;
+    width:15%;
+    border-radius: 50%;
+    margin-right: 20px;
+    bottom: 100px;
+    box-shadow: 5px 5px;
+}
+
+/*Changes business card header*/
+.business-card-header{
+    background-color: rgb(113,79,38);
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: none;
+}
+
+/*Changes business card footer*/
+.business-card-footer{
+    background-color: rgb(113,79,38);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: none;
+}
+
+/*Changes business card body*/
+.business-card-body p{
+    margin-left: 200px;
+    position: relative;
+    bottom: 70px;
+}
+
+/*Changes images in business card*/
+.business-card-body img{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+/*Sets business card body to white*/
+.business-card-body{
+    background-color: white;
+}
+
+/*Sets locations of each contact tab*/
+#tabs-1 li{
+    background-color: rgb(246,191,124);
+    position: relative;
+    left: 500px;
+    bottom: 50px;
+    border-radius: 0pt 0pt 0pt 0pt;
+}
+
+#tabs-2 li{
+    position: relative;
+    left: 500px;
+    bottom: 50px;
+    background-color: rgb(246,191,124);
+    border-radius: 0pt 0pt 0pt 0pt;
+}
+
+#tabs-3 li{
+    position: relative;
+    left: 200px;
+    bottom: 50px;
+    background-color: rgb(246,191,124);
+    border-radius: 0pt 0pt 0pt 0pt;
+}
+
+/*Changes how button looks*/
+.business-card-footer button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    color: white;
+}

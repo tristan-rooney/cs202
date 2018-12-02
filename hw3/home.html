@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meaning</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="pls.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+</head>
+<body>
+
+  <header>
+    <a href="home.html"><div class="pls"></div></a>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a href="contact.html">Contact</a></li>                
+      </ul>
+    </nav>
+  </header>
+
+  
+  <footer>
+    &copy; Programming Languages Society
+  </footer>
+  
+  <section>
+    <h1>What is a Programming Language?</h1>
+    <p>
+      A programming language is a vocabulary and set of grammatical rules for 
+      instructing a computer or computing device to perform specific tasks. The term programming language usually refers to 
+      high-level languages, such as <span class="language">C</span>, <span class="language">Java</span>, or 
+      <span class="language">JavaScript</span> rather than low-level languages
+      such as <span class="language">assembly</span> or <span class="language">micro-code</span>.
+    </p>
+    
+    <p>
+      There are hundreds of programming languages that differ in syntax and paradigm.  The major extant language paradigms
+      are listed below.
+    </p>
+
+    <ul class="paradigm-list">
+      <li>Functional</li>
+      <li>Imperative</li>
+      <li>Logical</li>
+    </ul>
+    
+    <p>
+      The question of which language is the <em class="sq">best</em> one
+      to use is a matter of frequent and wide-ranging debate among computer programmers.
+      But, of course, it turns out that the best language is the one that is best
+      able to solve the problem that you want solved at the moment.  A famous computer
+      scientist said that <q cite="http://www.defprogramming.com/quotes-by/c-a-r-hoare/">
+      The most important property of a program is whether it accomplishes the intention of its user.</q>
+      <span class="pls"></span> exists to advance both the understanding and 
+      expressive power of programming languages.
+    </p>
+
+
+    <section>
+      <h2>Summary of Programming Language Paradigms</h2>
+      <div class="tab-set">
+        <ul class="tab-labels">
+          <li class="tab-label"><a href="#tabs-1">Functional</a></li>
+          <li class="tab-label active"><a href="#tabs-2">Imperative</a></li>
+          <li class="tab-label"><a href="#tabs-3">Logical</a></li>
+        </ul>
+
+        <div class="tab" id="tabs-1">
+          <img src="https://static01.nyt.com/images/2011/10/26/business/MCCARTHY-obit/MCCARTHY-obit-popup.jpg"
+          alt="Portrait of John McCarthy">
+          <p>
+            In computer science, functional programming treats computation as the evaluation of mathematical functions and, as such, avoids the notion
+            of state.  It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of state-changing
+            statements. In functional code, the output value of a function depends only on the arguments that are passed to the function, so calling a function 
+            <span class="eqn"><var>f</var></span> twice with the same value for an argument x produces the same result <span class="eqn"><var>f</var>(<var>x</var>)</span> each time; this is in contrast to procedures depending on a local or global state, which may produce different results at different times when called with the same arguments but a different program state.
+          </p>
+
+          <p>
+            The following <span class="language">Haskell</span> program gives an example.
+          </p>
+
+          <code>fibs = 0 : 1 : zipWith (+) fibs (tail fibs)</code>
+
+          <p>
+            John McCarthy, a computer scientist who helped design the foundation of today’s Internet-based computing and who is 
+            widely credited with coining the term for a frontier of research he helped pioneer, Artificial Intelligence, or A.I., 
+            was one of the early proponents of functional programming.
+          </p>
+        </div>
+
+        <div class="tab active" id="tabs-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/John_Backus_2.jpg" alt="Portrait of John Backus">
+          <p>
+           Imperative programming uses statements that change a program's state. In much the same way that the 
+           imperative mood in natural languages expresses commands, an imperative program consists of commands 
+           for the computer to perform. Each executable command changes the internal program state.  
+         </p>
+
+         <p>
+          The following <span class="language">C</span> program gives an example.
+        </p>
+
+<code>int fib(int n) {
+  if (n &lt;= 1) {
+    return n; 
+  } else {
+    return fib(n-1) + fib(n-2); 
+  }
+}
+</code>
+
+  <p>
+    John Warner Backus directed the team that invented and implemented <span class="language">FORTRAN</span>, the first widely used 
+    high-level impereative programming language, and was the inventor of the Backus–Naur form (BNF), a widely used notation to 
+    define formal language syntax. He later did research into the function-level programming paradigm, presenting his 
+    findings in his influential 1977 Turing Award lecture "Can Programming Be Liberated from the von Neumann Style?
+  </p>
+
+</div>
+
+
+<div class="tab" id="tabs-3">
+  <img src="https://cacm.acm.org/system/assets/0002/7405/052217_Association_for_Logic_Programming_Colmerauer.large.jpeg"
+  alt="Image of Alain Colmerauer">
+  <p>
+    Logic programming is based on formal logic. Any program written in a logic programming language is a set of sentences 
+    in logical form, expressing facts and rules about some problem domain. Major logic programming language families include 
+    <span class="language">Prolog</span>, <span class="language">Answer set programming (ASP)</span> and <span class="language">Datalog</span>.
+  </p>
+
+<code>likes(mary,food).
+likes(mary,wine).
+likes(john,wine).
+likes(john,mary).
+</code>
+
+  <p>
+    Alain Colmerauer was the center of a research group that, in the early 1970s, first conceived of <span class="language">Prolog</span>, 
+    a general-purpose logic programming language rooted in first-order logic that is well-suited for tasks that benefit from rule-based logical 
+    queries such as searching databases, voice control systems, and filling templates.
+  </p>
+
+</div>
+</div>
+</section>    
+</section>
+
+<script>
+  $(document).ready(function () {
+    $('li.tab-label').click(function () {
+      $('.tab-set li.tab-label').removeClass('active');
+      $(this).addClass('active');
+
+      var id = $(this).find('a').attr('href');
+      $('.tab').removeClass('active');
+      $(id).addClass('active');
+    });
+  });
+</script>
+</body>
+</html>

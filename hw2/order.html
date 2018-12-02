@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tee Time</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="shirt.jpg" alt="Tee Time logo" height="50" width="100">
+        </a>
+        <br>
+        <em>Tee Time</em>
+        <br>
+        <ol>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="order.html">Order</a>
+            </li>
+        </ol>
+    </header>
+    <article>
+        <section>
+            <table border="1">
+                <caption>Sizing Chart</caption>
+                <tr>
+                    <td rowspan="2"></td>
+                    <th colspan="2">Shirt Length</th>
+                    <th colspan="2">Chest Width</th>
+                    <th colspan="2">Sleeve Length</th>
+                </tr>
+                <tr>
+                    <th>M</th>
+                    <th>W</th>
+                    <th>M</th>
+                    <th>W</th>
+                    <th>M</th>
+                    <th>W</th>
+                </tr>
+                <tr>
+                    <th>Small</th>
+                    <td>28.5"</td>
+                    <td>25.5"</td>
+                    <td>18"</td>
+                    <td>18"</td>
+                    <td>14.5"</td>
+                    <td>9.5"</td>
+                </tr>
+                <tr>
+                    <th>Medium</th>
+                    <td>29.5"</td>
+                    <td>26"</td>
+                    <td>20"</td>
+                    <td>19.5"</td>
+                    <td>16"</td>
+                    <td>10"</td>
+                </tr>
+                <tr>
+                    <th>Large</th>
+                    <td>30.5"</td>
+                    <td>27.5"</td>
+                    <td>22"</td>
+                    <td>21"</td>
+                    <td>16.5"</td>
+                    <td>11"</td>
+                </tr>
+                <tr>
+                    <th>XL</th>
+                    <td>31.5"</td>
+                    <td>29"</td>
+                    <td>24"</td>
+                    <td>23"</td>
+                    <td>17"</td>
+                    <td>12"</td>
+                </tr>
+                <tr>
+                    <th>XXL</th>
+                    <td>32.5"</td>
+                    <td>30"</td>
+                    <td>25"</td>
+                    <td>25"</td>
+                    <td>18"</td>
+                    <td>13"</td>
+                </tr>
+                <tr>
+                    <th>XXXL</th>
+                    <td>34"</td>
+                    <td>32"</td>
+                    <td>27"</td>
+                    <td>26.5"</td>
+                    <td>18.5"</td>
+                    <td>14"</td>
+                </tr>
+            </table>
+            <br>
+            <form action="http://138.49.184.173/order" method="GET">
+                <input type="text" value="First Name" name="first"><br>
+                <input type="text" value="Last Name" name="last"><br>
+                <input type="date" name="desired-delivery-date" value=""><br>
+                <select name="color">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="orange">Orange</option>
+                    <option value="orange-swirl">Orange-Swirl</option>
+                    <option value="ochre">Ochre</option>
+                    <option value="sky-blue">Sky-Blue</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="violet">Violet</option>
+                    <option value="turquoise">Turquoise</option>
+                    <option value="tie-dye">Tie-Dye</option>
+                    <option value="sea-foam">Sea-Foam</option>
+                </select><br>
+                <textarea name="text" rows="1" cols="40">What to be printed on the shirts</textarea><br>
+                <textarea name="comments" rows="5" cols="100">Comments</textarea><br>
+                <table>
+                    <tr>
+                        <th>Male Small</th>
+                        <td><input type="number" min="0" value="0" name="m-sm"></td>
+                        <th>Male Medium</th>
+                        <td><input type="number" min="0" value="0" name="m-med"></td>
+                        <th>Male Large</th>
+                        <td><input type="number" min="0" value="0" name="m-lg"></td>
+                        <th>Male XL</th>
+                        <td><input type="number" min="0" value="0" name="m-xl"></td>
+                        <th>Male XXL</th>
+                        <td><input type="number" min="0" value="0" name="m-xxl"></td>
+                        <th>Male XXXL</th>
+                        <td><input type="number" min="0" value="0" name="m-xxxl"></td>
+                    </tr>
+                    <tr>
+                        <th>Female Small</th>
+                        <td><input type="number" min="0" value="0" name="f-sm"></td>
+                        <th>Female Medium</th>
+                        <td><input type="number" min="0" value="0" name="f-med"></td>
+                        <th>Female Large</th>
+                        <td><input type="number" min="0" value="0" name="f-lg"></td>
+                        <th>Female XL</th>
+                        <td><input type="number" min="0" value="0" name="f-xl"></td>
+                        <th>Female XXL</th>
+                        <td><input type="number" min="0" value="0" name="f-xxl"></td>
+                        <th>Female XXXL</th>
+                        <td><input type="number" min="0" value="0" name="f-xxxl"></td>
+                    </tr>
+                </table>
+                <select name="shipping">
+                    <option value="GR">ground</option>
+                    <option value="2D">2-day</option>
+                    <option value="ON">overnight</option>
+                </select><br>
+                allergy-sensitive<input type="checkbox" name="extras" value="T0">
+                heavy<input type="checkbox" name="extras" value="T1">
+                domestic<input type="checkbox" name="extras" value="T2">
+                uv-protection<input type="checkbox" name="extras" value="T3"><br>
+                <input type="submit" value="submit">
+
+            </form>
+        </section>
+
+        <br>
+        <footer>
+            <section>
+                <ol>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="order.html">Order</a>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <address>
+                    Tee Time Headquarters <br>
+                    1265 French Island Rd. <br>
+                    La Crosse, WI 54601 <br>
+                    USA
+                </address>
+            </section>
+            <p>&copy; Tee Time</p>
+        </footer>
+    </article>
+</body>
+
+</html>
