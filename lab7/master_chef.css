@@ -1,0 +1,40 @@
+/*Author: Tristan Rooney
+  Last Modified @ 11:19pm Nov 19th 2018
+*/
+img.star{
+    height: 5%;
+    width:5%;
+    right: 5px;
+}
+
+.food{
+    vertical-align: middle;
+    position: relative;
+    height: 10%;
+    width: 10%;
+    border-radius: 15%;
+    float: right;
+}
+
+.cal{
+    font-weight: 700;
+}
+
+section{
+    background-color: beige;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top-right-radius: 15pt;
+    border-top-left-radius: 15pt;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
+}
+
+
+
+
+

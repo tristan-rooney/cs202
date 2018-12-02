@@ -1,5 +1,3 @@
-//age = Number, State = 2 letter String (not case sensitive)
-//Filed = Boolean, Dependents = Number (optional, ommited if filed is false)
 function eligible(age, state, filed, dependents) {
   if (age > 60 && (state.toUpperCase() === 'WI' || state.toUpperCase() === 'IA') && filed == true && (dependents >= 1 && dependents <= 5)) {
     return true;
@@ -87,7 +85,6 @@ function oddlyEven(data) {
   }
 }
 
-//FIX//////////////////////////////////////////////
 function lettersNearby(text, key, offset) {
   var i, j, occurences = [], result = [];
   var k = 0;
@@ -144,7 +141,6 @@ function lettersNearby(text, key, offset) {
   return result.toString();
 
 }
-////////////////////////////////////////////////////////////
 
 function props(list, propertyName) {
   var result = [];
@@ -235,6 +231,57 @@ function matchmaker(obj) {
   }
 }
 
+
 function breakup(list, partitioner) {
-ß
+  var result = {};
+  var r1 = [];
+  var r2 = [];
+  
+  for (var i = 0; i < list.length; i++) {
+    if (result.hasOwnProperty(partitioner(list[i]))) {
+      r1 = r1.push(list[i]);
+      result[partitioner(list[i])] = r1;
+    } else {
+      result = { [partitioner(list[i])]: [list[i]] };
+    }
+  }
+  return result;
+}
+
+function none(list, predicate) {
+  var i = 0;
+  var t = 0;
+  for (i; i < list.length; i++) {
+    if (!predicate(list[i])) {
+      t++;
+    }
+  }
+  if (t == list.length) {
+    return true;
+  } else { return false; }
+}
+
+function noSql(list, query) {
+  var result = [];
+  var i;
+  list.filter(x => {if(query in x){
+    result = result.push(x);
+  }})
+  return result;
+}
+
+
+var toChoose;
+function myChoice(items) {
+  var item;
+  var num;
+  return function (input) {
+    if (input != 'rechoose') {
+      return toChoose;
+    } else {
+      num = Math.floor(Math.random() * items.length);
+      toChoose = items[num];
+      return toChoose;
+    }
+  }
 }
